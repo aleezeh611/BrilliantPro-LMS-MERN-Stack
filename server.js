@@ -4,6 +4,8 @@ const { retry } = require('rxjs');
 const app = express();
 // set our port
 const port = 8086;
+//consta port = 4200;
+//const port = 3000;
 
 var cors = require('cors')
 app.use(cors());
