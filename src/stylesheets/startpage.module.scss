@@ -1,6 +1,5 @@
 .align{
     display:flex;
-    color:pink;
 }
 
 .welcomebox{
@@ -13,7 +12,6 @@
     border-color: #18A4AB;
     border-style: solid;
     border-width: 2px;
-    color: #18A4AB;
     font-family: Poppins;
     font-size: 15px;
     padding: 5px;
@@ -22,9 +20,58 @@
     margin:2px;
     padding-right: 10px;
     padding-left: 10px;
+    text-decoration: none;
+}
+.startbtn a{
+    text-decoration: none;
+    color: #18A4AB;
+}
+.startbtn a:hover{
+    background-color:#18A4AB;
+    color: white;
+    
 }
 .startbtn:hover{
     background-color:#18A4AB;
     color: white;
     
+}
+
+//====================================================================================================
+//                                          LOGO
+//====================================================================================================
+
+.logo{
+    float: left;
+}
+.rowC{
+    display:flex; 
+    background-color: #ffffff;
+    margin-bottom: 5%;
+}
+
+navbar_item {
+    float: right;
+    font-family: Poppins;
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 15px;
+    padding-top: 10px;
+    vertical-align:text-bottom;
+}
+  
+navbar_item a {
+    background-color: rgb(253, 253, 253);
+    display: block;
+    color: rgb(146, 146, 146);
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+  
+navbar_item a:hover{
+    border-radius: 20px;
+    border-width: 1px;
+    background-color: #F6B737;
+    color:rgb(253, 253, 253);
 }

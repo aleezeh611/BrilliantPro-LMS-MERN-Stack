@@ -4,6 +4,7 @@ import backimg from './graphics/mainback.png';
 import styles from '../stylesheets/startpage.module.scss';
 import '../stylesheets/fontstyles.scss';
 import logo from './graphics/logo.png';
+import { Link } from 'react-router-dom';
 
 function StartPage() {
   return (
@@ -13,9 +14,9 @@ function StartPage() {
         <div><img src = {logo} width = "220px" height= "200px"/></div>
         <br/>
         <heading2>Are you an</heading2><br/>
-        <button className={styles.startbtn}>Administrator</button><br/>
+        <button className={styles.startbtn}><a href ="/" >Administrator</a></button><br/>
         <heading2>Or a</heading2><br/>
-        <button className={styles.startbtn}>Learner</button>
+        <button className={styles.startbtn}><a href = "/ViewCourses">Learner</a></button>
         </div>
         <img src = {backimg} width = "70%" height="690px"/>
     </div>

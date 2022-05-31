@@ -6,19 +6,28 @@ import reportWebVitals from './reportWebVitals';
 import StartPage from './components/StartPage';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ViewCourses from './components/ViewCourses';
+import Navigation from './components/Navigation';
 
 
 function Greeting(props) {
+  const curr_path = props.curr_path;
+  if (curr_path == "/") {
+    return   <Router>
+      <Routes>
+        <Route path='/' element={<StartPage/>} />
+      </Routes>
+    </Router>;
+  }
   return <Router>
+    <Navigation/>
     <Routes>
-      <Route path='/' element={<StartPage/>} />
-      <Route path='/ViewCourses' element={<ViewCourses/>} />
+    <Route path='/ViewCourses' element={<ViewCourses/>} />
     </Routes>
   </Router>;
 }
 
 ReactDOM.render(
-  <Greeting />,
+  <Greeting curr_path={window.location.pathname} />,
   document.getElementById('root')
 );
 
