@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+//====================================================================================================
+//                                          START PAGE
+//====================================================================================================
+
 .align{
     display:flex;
 }
@@ -38,16 +44,27 @@
 }
 
 //====================================================================================================
-//                                          LOGO
+//                                          NAV BAR 
 //====================================================================================================
 
+.navbar{   
+    // background-color: #f1eded;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    border-color: #fcfcfc;
+    border-bottom: #e4e4e4;
+    border-style:solid;
+    border-width: 1px;
+    padding-bottom: 5px;
+}
 .logo{
     float: left;
 }
 .rowC{
     display:flex; 
     background-color: #ffffff;
-    margin-bottom: 5%;
 }
 
 navbar_item {
@@ -74,4 +91,41 @@ navbar_item a:hover{
     border-width: 1px;
     background-color: #F6B737;
     color:rgb(253, 253, 253);
+}
+
+//=================================================================================================
+//                                      MENU BAR
+//=================================================================================================
+
+.menubox{
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    width: 15%;
+    background-color: #18A4AB;
+    margin-top:5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    position: fixed;
+}
+
+.menuitems{
+    color:white;
+    font-family: Poppins;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #18A4AB;
+    border-color: #18A4AB;
+    border-style: none;
+    text-align: left;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 40px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.menuitems:hover{
+    background-color: #5eb5b9;
 }
