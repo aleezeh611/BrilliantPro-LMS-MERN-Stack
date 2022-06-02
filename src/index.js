@@ -5,16 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StartPage from './components/StartPage';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ViewCourses from './components/ViewCourses';
+import ViewCourses from './components/CoursePages/ViewCourses';
+import AdminDash from './components/AdminDash';
 import Navigation from './components/Navigation';
 
 
 function Greeting(props) {
   const curr_path = props.curr_path;
-  if (curr_path == "/") {
+  if (curr_path === "/" || curr_path === "/StartPage") {
     return   <Router>
       <Routes>
         <Route path='/' element={<StartPage/>} />
+        <Route path='/StartPage' element={<StartPage/>} />
       </Routes>
     </Router>;
   }
@@ -22,6 +24,7 @@ function Greeting(props) {
     <Navigation/>
     <Routes>
     <Route path='/ViewCourses' element={<ViewCourses/>} />
+    <Route path = '/AdminDash' element={<AdminDash/>} />
     </Routes>
   </Router>;
 }

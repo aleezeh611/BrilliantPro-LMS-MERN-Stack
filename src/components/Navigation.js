@@ -10,9 +10,9 @@ class Navigation extends Component {
             <div className={styles.navbar}>
                 <img className = {styles.logo} alt="logo" src={logo} width="90" height="70" />
                 <title1 >Brilliant</title1><title2>Pro</title2>
-                <navbar_item><Link to ='/'>LOG OUT</Link></navbar_item>
+                <navbar_item><Link to ='/StartPage'>LOG OUT</Link></navbar_item>
                 <navbar_item><Link to='/'>HELP</Link></navbar_item>
-                <navbar_item><Link to ='/'>HOME</Link></navbar_item>
+                <navbar_item><Link to ='/AdminDash'>HOME</Link></navbar_item>
             </div>
         );
     }

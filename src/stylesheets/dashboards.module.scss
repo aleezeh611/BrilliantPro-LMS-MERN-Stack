@@ -1,0 +1,119 @@
+//=========================================================================================================
+//                                      ADMIN DASHBOARD
+//=========================================================================================================
+.outterbox{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 3%;
+}
+.innerbox{
+    display: block;
+    margin: 20px;
+}
+.innerbox a{
+    text-decoration: none;
+}
+.innerbox:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+    border-radius: 10px;
+}
+.graphicbox1{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #18a4ab2c;
+    border-style: none;
+    padding-top:30px;
+    padding-bottom:10px;
+    padding-left:5px;
+    padding-right: 5px;
+    width:200px;
+    height: 305px;
+}
+.textbox1{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #18a4ab;
+    border-style: none;
+    padding:5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width:200px;
+    display: grid;
+}
+.graphicbox2{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    background-color: #ff57575d;
+    padding:5px;
+    width:190px;
+}
+.textbox2{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #FF5757;
+    padding: 5px;
+    width:190px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: grid;
+}
+.graphicbox3{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #f6b63742;
+    width:190px;
+    padding:5px;
+    padding-top:16px;
+}
+.textbox3{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #F6B737;
+    padding: 5px;
+    width:190px;
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.graphicbox4{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #7234a14d;
+    padding: 5px;
+    width:190px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    height: 305px;
+}
+.textbox4{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #7134A1;
+    padding: 5px;
+    width:190px;
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.graphicbox5{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #18ab534b;
+    padding: 5px;
+    width:190px;
+    padding-top:5px;
+    padding-bottom: 6px;
+}
+.textbox5{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #18AB53;
+    padding: 5px;
+    width:190px;
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}

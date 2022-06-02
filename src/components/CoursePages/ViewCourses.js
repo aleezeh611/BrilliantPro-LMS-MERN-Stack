@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import styles from '../stylesheets/startpage.module.scss'
+import styles from '../../stylesheets/startpage.module.scss'
 import axios from 'axios';
-import '../stylesheets/fontstyles.scss';
-import MenuBar from './menubar';
+import '../../stylesheets/fontstyles.scss';
+import MenuBar from '../menubar';
 
 function ViewCourses() {
   const [getMessage,setGetMessage] = useState({})

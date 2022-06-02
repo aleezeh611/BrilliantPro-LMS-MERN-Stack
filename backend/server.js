@@ -44,6 +44,50 @@ app.get('/getCourses', function(req, res){
   })
 })
 
+app.get('/getCourseCount', function(req, res){
+  mongoClient.connect(function (err, client) {
+      console.log("MongoDB Counting Courses")
+      const db = client.db(dbName);
+  db.collection("courses")
+      .countDocuments(function (err, count) {
+      if (err) throw err;
+      res.send(count.toString());
+  });
+  })
+})
+app.get('/getLearnersCount', function(req, res){
+  mongoClient.connect(function (err, client) {
+      console.log("MongoDB Counting Courses")
+      const db = client.db(dbName);
+  db.collection("learners")
+      .countDocuments(function (err, count) {
+      if (err) throw err;
+      res.send(count.toString());
+  });
+  })
+})
+app.get('/getAssessmentsCount', function(req, res){
+  mongoClient.connect(function (err, client) {
+      console.log("MongoDB Counting Courses")
+      const db = client.db(dbName);
+  db.collection("assessments")
+      .countDocuments(function (err, count) {
+      if (err) throw err;
+      res.send(count.toString());
+  });
+  })
+})
+app.get('/getMaterialsCount', function(req, res){
+  mongoClient.connect(function (err, client) {
+      console.log("MongoDB Counting Courses")
+      const db = client.db(dbName);
+  db.collection("materials")
+      .countDocuments(function (err, count) {
+      if (err) throw err;
+      res.send(count.toString());
+  });
+  })
+})
 // app.delete('/delVehicle', function (req, res) {
 //   mongoClient.connect(function (err, client) {
 //     console.log("MongoDB trying to delete")
