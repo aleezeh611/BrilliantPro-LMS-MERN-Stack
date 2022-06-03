@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+//====================================================================================================
+//                                          START PAGE
+//====================================================================================================
+
 .align{
     display:flex;
-    color:pink;
 }
 
 .welcomebox{
@@ -13,7 +18,6 @@
     border-color: #18A4AB;
     border-style: solid;
     border-width: 2px;
-    color: #18A4AB;
     font-family: Poppins;
     font-size: 15px;
     padding: 5px;
@@ -22,9 +26,138 @@
     margin:2px;
     padding-right: 10px;
     padding-left: 10px;
+    text-decoration: none;
+}
+.startbtn a{
+    text-decoration: none;
+    color: #18A4AB;
+}
+.startbtn a:hover{
+    background-color:#18A4AB;
+    color: white;
+    
 }
 .startbtn:hover{
     background-color:#18A4AB;
     color: white;
     
+}
+
+//====================================================================================================
+//                                          NAV BAR 
+//====================================================================================================
+
+.navbar{   
+    // background-color: #f1eded;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    border-color: #fcfcfc;
+    border-bottom: #e4e4e4;
+    border-style:solid;
+    border-width: 1px;
+    padding-bottom: 5px;
+}
+.logo{
+    float: left;
+}
+.rowC{
+    display:flex; 
+    background-color: #ffffff;
+}
+
+navbar_item {
+    float: right;
+    font-family: Poppins;
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 15px;
+    padding-top: 10px;
+    vertical-align:text-bottom;
+}
+  
+navbar_item a {
+    background-color: rgb(253, 253, 253);
+    display: block;
+    color: rgb(146, 146, 146);
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+  
+navbar_item a:hover{
+    border-radius: 20px;
+    border-width: 1px;
+    background-color: #F6B737;
+    color:rgb(253, 253, 253);
+}
+
+//=================================================================================================
+//                                      MENU BAR
+//=================================================================================================
+
+.menubox{
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    width: 15%;
+    background-color: #18A4AB;
+    margin-top:5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    position: fixed;
+}
+
+.menuitems{
+    color:white;
+    font-family: Poppins;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #18A4AB;
+    border-color: #18A4AB;
+    border-style: none;
+    text-align: left;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 40px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.menuitems:hover{
+    background-color: #5eb5b9;
+}
+
+// .card {
+//     margin-top: 40%;
+// }
+
+.btnprimary {
+    border-color: #18A4AB;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 40px;
+    font-family: Poppins;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #18A4AB;
+    margin:2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    // text-decoration: none;
+}
+
+.btnprimary a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btnprimary:hover {
+    border-width: 1px;
+    background-color: #F6B737;
+    color: white;
 }
