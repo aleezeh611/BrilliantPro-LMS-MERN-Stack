@@ -36,9 +36,7 @@ function ViewCourses() {
                   <Col xs="3">{item.CourseID}</Col>
                 <Col xs="6">{item.CourseName}</Col>
                 <Col>
-                <div className={styles.btnprimary} >
-                  <a href="#" class="Button">View Course</a>
-                  </div>
+                <button className={styles.btnprimary}><a href ="/ViewDetails" >View Details</a></button>
                 </Col>
               </Row>
               </div>

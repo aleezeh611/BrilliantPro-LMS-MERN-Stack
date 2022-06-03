@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import StartPage from './components/StartPage';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ViewCourses from './components/ViewCourses';
+import ViewDetails from './components/ViewDetails';
 
 
 function Greeting(props) {
@@ -13,6 +14,7 @@ function Greeting(props) {
     <Routes>
       <Route path='/' element={<StartPage/>} />
       <Route path='/ViewCourses' element={<ViewCourses/>} />
+      <Route path='/ViewDetails' element={<ViewDetails/>}/>
     </Routes>
   </Router>;
 }

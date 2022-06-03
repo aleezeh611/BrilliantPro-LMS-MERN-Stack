@@ -130,9 +130,9 @@ navbar_item a:hover{
     background-color: #5eb5b9;
 }
 
-// .card {
-//     margin-top: 40%;
-// }
+//=================================================================================================
+//                                      View Course Buttons
+//=================================================================================================
 
 .btnprimary {
     border-color: #18A4AB;
@@ -160,4 +160,177 @@ navbar_item a:hover{
     border-width: 1px;
     background-color: #F6B737;
     color: white;
+}
+
+//=================================================================================================
+//                                      Course Details
+//=================================================================================================
+
+.outterbox{
+    border-radius: 25px;
+    padding: 20px;
+    width: 700px;
+    height: 450px;
+    margin-left: 30%;
+    margin-top: 5%;
+    background-color: #f8f4f4;
+}
+
+.innertabbox1{
+    border-radius: 12px;
+    border: 2px solid #36c4cc;
+    text-align: center;
+    width: 140px;
+    height: 55px;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-color: #36c4cc;
+    color: rgb(255, 255, 255);
+}
+
+.innertabbox1:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+    border-radius: 12px;
+}
+
+.innertabbox2{
+    border-radius: 12px;
+    border: 2px solid #36c4cc;
+    text-align: center;
+    width: 140px;
+    height: 55px;
+    padding: 10px;
+    margin-left: 40%;
+    margin-top: -8%;
+    background-color: #36c4cc;
+    color: rgb(255, 255, 255);
+}
+
+.innertabbox2:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+    border-radius: 12px;
+}
+
+.innertabbox3{
+    border-radius: 12px;
+    border: 2px solid #36c4cc;
+    text-align: center;
+    width: 140px;
+    height: 55px;
+    padding: 10px;
+    margin-left: 70%;
+    margin-top: -8%;
+    background-color: #36c4cc;
+    color: rgb(255, 255, 255);
+}
+
+.innertabbox3:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+    border-radius: 12px;
+}
+
+.displaybox1{
+    border-radius: 12px;
+    border: 2px solid #e6da36;
+    text-align: center;
+    width: 140px;
+    height: 55px;
+    padding: 9px;
+    margin-left: 10%;
+    margin-top: 12%;
+    background-color: #e6da36;
+    color: rgb(255, 255, 255);
+}
+
+.displaybox1:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+    border-radius: 12px;
+}
+
+.displaybox2{
+    border-radius: 12px;
+    border: 2px solid #e6da36;
+    text-align: center;
+    width: 140px;
+    height: 55px;
+    padding: 10px;
+    margin-left: 40%;
+    margin-top: -8%;
+    background-color: #e6da36;
+    color: rgb(255, 255, 255);
+}
+
+.displaybox2:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+    border-radius: 12px;
+}
+
+.displaybox3{
+    border-radius: 12px;
+    border: 2px solid #e6da36;
+    text-align: center;
+    width: 140px;
+    height: 55px;
+    padding: 10px;
+    margin-left: 70%;
+    margin-top: -8.5%;
+    background-color: #e6da36;
+    color: rgb(255, 255, 255);
+}
+
+.displaybox3:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+    border-radius: 12px;
+}
+
+.displaybox4{
+    border-radius: 12px;
+    border: 2px solid #45e445;
+    text-align: center;
+    width: 140px;
+    height: 55px;
+    padding: 10px;
+    margin-left: 26%;
+    margin-top: 10%;
+    background-color: #45e445;
+    color: rgb(255, 255, 255);
+}
+
+.displaybox4:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+    border-radius: 12px;
+}
+
+.displaybox5{
+    border-radius: 12px;
+    border: 2px solid #e63636;
+    text-align: center;
+    width: 140px;
+    height: 55px;
+    padding: 10px;
+    margin-left: 58%;
+    margin-top: -8.5%;
+    background-color: #e63636;
+    color: rgb(255, 255, 255);
+}
+
+.displaybox5:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+    border-radius: 12px;
 }
