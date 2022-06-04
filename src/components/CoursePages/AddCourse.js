@@ -1,43 +1,125 @@
-import React, {useEffect, useState} from 'react';
-import styles from '../../stylesheets/startpage.module.scss'
+import React, { useState} from 'react';
+import styles from '../../stylesheets/coursepages.module.scss'
 import axios from 'axios';
 import '../../stylesheets/fontstyles.scss';
 import MenuBar from '../menubar';
 
-function ViewCourses() {
-  const [getMessage,setGetMessage] = useState({})
-
-  useEffect(()=>{
-    axios.get('http://localhost:8086/getCourses').then(response => {
-      console.log("SUCCESS", response)
-      setGetMessage(response)
-    }).catch(error => {
-      console.log(error)
-    })
+function AddCourse() {
+  const [cid, setcid] = useState("");
+  const [cname, setName] = useState("");
+  const [coverview, setoverview] = useState("");
+  const [cdeadline, setdeadline] = useState("");
+  const [cimg, setimg] = useState("");
+  const [cfee, setfee] = useState("");
+  const [clink, setlink] = useState("");
   
-  }, [])
+
+  const handleSubmit = () => {
+
+    axios.post('http://localhost:8086/AddCourse?id='+cid+"&name="+cname+"&overview="+coverview+"&deadline="+cdeadline+"&fee="+cfee+"&img="+cimg+"&link="+clink)
+    .then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error);
+    });
+  }
 
   return (
-    <div>
+    <div className={styles.outterboxcourses}>
     <MenuBar/>
-      {getMessage.status === 200 ?<p>
-        {getMessage.data.map((item, i) => { return<table style={{width:"100%"}}>
-        <tbody>
-            <tr>
-              <th>{item.CourseID}</th>
-              <th>{item.CourseName}</th>
-              <th>{item.CourseOverview}</th>
-              <th>{item.Deadline}</th>
-              <th>{item.Fee}</th>
-            </tr>
-        </tbody>
-          </table>
-        })}      
-        </p>:
-           <p>NO ITEM</p>
-        } 
+      <div className={styles.contentbox}>
+      <form onSubmit={handleSubmit}>
+      <table className={styles.tablestyle}>
+      <tr>
+        <td style={{width:"15%"}}>
+          <formlabels>ID: </formlabels> 
+        </td>
+        <td>
+          <input className={styles.searchform}
+            type="text" 
+            value={cid}
+            onChange={(e) => setcid(e.target.value)}
+          />
+        </td>
+        </tr>
+        <tr>
+        <td>
+         <formlabels>Name: </formlabels>
+        </td>
+        <td> 
+          <input className={styles.searchform}
+            type="text" 
+            value={cname}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </td>
+        </tr>
+        <tr>
+        <td>
+          <formlabels>Overview: </formlabels> 
+        </td>
+        <td >
+          <input className={styles.searchform}
+            type="text" 
+            value={coverview}
+            onChange={(e) => setoverview(e.target.value)}
+          />
+        </td>
+        </tr>
+        <tr>
+        <td>
+          <formlabels>Deadline: </formlabels> 
+        </td>
+        <td>
+          <input className={styles.searchform}
+            type="text" 
+            value={cdeadline}
+            onChange={(e) => setdeadline(e.target.value)}
+          />
+        </td>
+        </tr>
+        <tr>
+        <td>
+          <formlabels>Fee: </formlabels> 
+        </td>
+        <td>
+          <input className={styles.searchform}
+            type="text" 
+            value={cfee}
+            onChange={(e) => setfee(e.target.value)}
+          />
+        </td>
+        </tr>
+        <tr>
+        <td>
+          <formlabels>Image: </formlabels> 
+        </td>
+        <td>
+          <input className={styles.searchform}
+            type="text" 
+            value={cimg}
+            onChange={(e) => setimg(e.target.value)}
+          />
+        </td>
+        </tr>
+        <tr>
+        <td>
+          <formlabels>Enrollment Link: </formlabels> 
+        </td>
+        <td>
+          <input className={styles.searchform}
+            type="text" 
+            value={clink}
+            onChange={(e) => setlink(e.target.value)}
+          />
+        </td>
+        </tr>
+      </table>
+      <input type="submit" value = "Add Course" className={styles.searchbtn}/>
+      </form>
+      </div> 
     </div>
   );
 }
 
-export default ViewCourses;
+export default AddCourse;

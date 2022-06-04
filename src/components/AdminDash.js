@@ -12,6 +12,10 @@ import axios from 'axios';
 
 function AdminDash() {
     const [courseCount,setCourseCount] = useState({})
+    const [learnerCount,setLearnerCount] = useState({})
+    const [assessmentCount,setAssessmentCount] = useState({})
+    const [materialCount,setMaterialCount] = useState({})
+    const [certificateCount,setCertificateCount] = useState({})
 
     useEffect(()=>{
       axios.get('http://localhost:8086/getCourseCount').then(response => {
@@ -20,8 +24,42 @@ function AdminDash() {
       }).catch(error => {
         console.log(error)
       })
-    
     }, [])
+    
+    useEffect(()=>{
+        axios.get('http://localhost:8086/getLearnersCount').then(response => {
+          console.log("SUCCESS", response)
+          setLearnerCount(response)
+        }).catch(error => {
+          console.log(error)
+        })
+      }, [])
+
+    useEffect(()=>{
+        axios.get('http://localhost:8086/getAssessmentsCount').then(response => {
+          console.log("SUCCESS", response)
+          setAssessmentCount(response)
+        }).catch(error => {
+          console.log(error)
+        })
+      }, [])
+
+    useEffect(()=>{
+        axios.get('http://localhost:8086/getMaterialsCount').then(response => {
+          console.log("SUCCESS", response)
+          setMaterialCount(response)
+        }).catch(error => {
+          console.log(error)
+        })
+      }, [])
+    useEffect(()=>{
+        axios.get('http://localhost:8086/getCertificatesCount').then(response => {
+          console.log("SUCCESS", response)
+          setCertificateCount(response)
+        }).catch(error => {
+          console.log(error)
+        })
+      }, [])
 
   return (
     <div className={styles.outterbox}>
@@ -40,7 +78,7 @@ function AdminDash() {
             </div>
             <div className={styles.textbox2}>
             <heading1 style={{color: "white"}}>Learners</heading1>
-            <heading2 style={{color: "white"}}>Total Active Learners: {courseCount.data}</heading2>
+            <heading2 style={{color: "white"}}>Total Active Learners: {learnerCount.data}</heading2>
             </div>
         </div>
         <div className={styles.innerbox}>
@@ -49,7 +87,7 @@ function AdminDash() {
             </div>
             <div className={styles.textbox3}>
             <heading1 style={{color: "white"}}>Certificates</heading1>
-            <heading2 style={{color: "white"}}>Certificates Distributed: {courseCount.data}</heading2>
+            <heading2 style={{color: "white"}}>Certificates Distributed: {certificateCount.data}</heading2>
             </div>
         </div>
         <div className={styles.innerbox}>
@@ -58,7 +96,7 @@ function AdminDash() {
             </div>
             <div className={styles.textbox4}>
             <heading1 style={{color: "white"}}>Assessments</heading1>
-            <heading2 style={{color: "white"}}>Current Assessments: {courseCount.data}</heading2>
+            <heading2 style={{color: "white"}}>Current Assessments: {assessmentCount.data}</heading2>
             </div>
         </div>
         <div className={styles.innerbox}>
@@ -67,7 +105,7 @@ function AdminDash() {
             </div>
             <div className={styles.textbox5}>
             <heading1 style={{color: "white"}}>Materials</heading1>
-            <heading2 style={{color: "white"}}>Total Uploaded Materials: {courseCount.data}</heading2>
+            <heading2 style={{color: "white"}}>Total Uploaded Materials: {materialCount.data}</heading2>
             </div>
         </div>
     </div>

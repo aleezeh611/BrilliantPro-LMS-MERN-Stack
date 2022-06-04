@@ -8,6 +8,8 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ViewCourses from './components/CoursePages/ViewCourses';
 import AdminDash from './components/AdminDash';
 import Navigation from './components/Navigation';
+import AddCourse from './components/CoursePages/AddCourse';
+import ViewDetails from './components/CoursePages/ViewDetails';
 
 
 function Greeting(props) {
@@ -25,6 +27,8 @@ function Greeting(props) {
     <Routes>
     <Route path='/ViewCourses' element={<ViewCourses/>} />
     <Route path = '/AdminDash' element={<AdminDash/>} />
+    <Route path = '/AddCourse' element={<AddCourse/>} />
+    <Route path = '/ViewDetails' element={<ViewDetails/>} />
     </Routes>
   </Router>;
 }

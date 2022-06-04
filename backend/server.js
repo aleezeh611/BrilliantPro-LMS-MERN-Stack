@@ -88,6 +88,37 @@ app.get('/getMaterialsCount', function(req, res){
   });
   })
 })
+app.get('/getCertificatesCount', function(req, res){
+  mongoClient.connect(function (err, client) {
+      console.log("MongoDB Counting Courses")
+      const db = client.db(dbName);
+  db.collection("certificates")
+      .countDocuments(function (err, count) {
+      if (err) throw err;
+      res.send(count.toString());
+  });
+  })
+})
+
+app.post('/AddCourse', function(req, res){
+  console.log("Got a POST request for /Add --> name="+req.query.name);
+  mongoClient.connect(function (err, client) {
+      console.log("MongoDB Connected")
+      const db = client.db(dbName);
+      db.collection("courses").insertOne({
+         CourseID:req.query.id, 
+         CourseName: req.query.name, 
+         CourseOverview:req.query.overview, 
+         Deadline: req.query.deadline,
+          CourseImage: req.query.img, 
+         Fee: req.query.fee, 
+         EnrollLink: req.query.link,
+         TotalLearners: 0  
+    });
+  res.send("Received data:: title ="+req.query.name);
+})
+})
+
 // app.delete('/delVehicle', function (req, res) {
 //   mongoClient.connect(function (err, client) {
 //     console.log("MongoDB trying to delete")
