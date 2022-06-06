@@ -11,6 +11,7 @@ import AddCourse from './components/AdminPages/CoursePages/AddCourse';
 import ViewDetails from './components/AdminPages/CoursePages/ViewDetails';
 import Login from './components/LearnerPages/Login';
 import RegisterLearner from './components/LearnerPages/Register';
+import LearnerDash from './components/LearnerPages/LearnerDash';
 
 
 function Greeting(props) {
@@ -32,6 +33,7 @@ function Greeting(props) {
     <Route path = '/AdminDash' element={<AdminDash/>} />
     <Route path = '/AddCourse' element={<AddCourse/>} />
     <Route path = '/ViewDetails' element={<ViewDetails/>} />
+    <Route path='/LearnerDash' element={<LearnerDash/>} />
     </Routes>
   </Router>;
 }
