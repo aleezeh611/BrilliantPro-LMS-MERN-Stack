@@ -9,14 +9,14 @@ function StartPage() {
     <div className={styles.align}>
         <div className = {styles.welcomebox}>
         <heading1>Welcome To</heading1>
-        <div><img src = {logo} width = "220px" height= "200px"/></div>
+        <div><img src = {logo} alt = "logo" width = "220px" height= "200px"/></div>
         <br/>
         <heading2>Are you an</heading2><br/>
         <button className={styles.startbtn}><a href ="/AdminDash" >Administrator</a></button><br/>
         <heading2>Or a</heading2><br/>
-        <button className={styles.startbtn}><a href = "/ViewCourses">Learner</a></button>
+        <button className={styles.startbtn}><a href = "/Login">Learner</a></button>
         </div>
-        <img src = {backimg} width = "70%" height="690px"/>
+        <img src = {backimg} alt = "background" width = "70%" height="690px"/>
     </div>
   );
 }
