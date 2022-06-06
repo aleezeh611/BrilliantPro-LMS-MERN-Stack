@@ -12,6 +12,8 @@ const port = 8086;
 var cors = require('cors')
 app.use(cors());
 
+username = ""
+
 //==============================================mongodb================================================
 // Connect using a MongoClient instance
 const MongoClient = require("mongodb").MongoClient;
@@ -31,21 +33,7 @@ const mongoClient = new MongoClient(url);
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 app.get('/', (req, res) => res.send('Server has started!'));
 
-
 //Admin Dashboard API Calls--------------------------------------------------------------------------
-app.get('/getCourses', function(req, res){
-  mongoClient.connect(function (err, client) {
-      console.log("MongoDB Connected")
-      const db = client.db(dbName);
-  db.collection("courses")
-      .find()
-      .toArray(function (err, rows) {
-      if (err) throw err;
-      res.send(rows);
-  });
-  })
-})
-
 app.get('/getCourseCount', function(req, res){
   mongoClient.connect(function (err, client) {
       console.log("MongoDB Counting Courses")
@@ -121,6 +109,21 @@ app.post('/AddCourse', function(req, res){
 })
 })
 
+//Course API Calls----------------------------------------------------------------------------------------
+app.get('/getCourses', function(req, res){
+  mongoClient.connect(function (err, client) {
+      console.log("MongoDB Connected")
+      const db = client.db(dbName);
+  db.collection("courses")
+      .find()
+      .toArray(function (err, rows) {
+      if (err) throw err;
+      res.send(rows);
+  });
+  })
+})
+
+
 //Login and Sign Up Pages---------------------------------------------------------------------------------
 app.post('/RegisterLearner', function(req, res){
   console.log("Got a POST request for Register Learner --> name="+req.query.username);
@@ -136,6 +139,58 @@ app.post('/RegisterLearner', function(req, res){
   res.send("Received data:: title ="+req.query.name);
 })
 })
+
+app.post('/StoreUsername', function(req, res){
+  console.log("Logged in --> name="+req.query.id);
+  username = req.query.id; 
+  res.send("Received data:: title ="+req.query.name);
+})
+
+app.get('/getAllLearners', function(req, res){
+  mongoClient.connect(function (err, client) {
+      console.log("MongoDB Connected")
+      const db = client.db(dbName);
+  db.collection("courses")
+      .find()
+      .toArray(function (err, rows) {
+      if (err) throw err;
+      res.send(rows);
+  });
+  })
+})
+
+app.get('/getcurrentuser', function(req, res){
+    res.send(username);
+})
+
+app.get('/getlearnercoursedetails', function(req, res){
+  mongoClient.connect(function (err, client) {
+    console.log("Getting Details")
+    const db = client.db(dbName);
+db.collection("learners")
+    .find({"username": username})
+    .toArray(function (err, rows) {
+    if (err) throw err;
+    res.send(rows);
+});
+})
+})
+
+app.get('/getusercertificate', function(req, res){
+  mongoClient.connect(function (err, client) {
+    console.log("Getting Certicate")
+    const db = client.db(dbName);
+db.collection("certificates")
+    .find({"userid": username})
+    .toArray(function (err, rows) {
+    if (err) throw err;
+    res.send(rows);
+});
+})
+})
+
+
+
 
 // app.delete('/delVehicle', function (req, res) {
 //   mongoClient.connect(function (err, client) {

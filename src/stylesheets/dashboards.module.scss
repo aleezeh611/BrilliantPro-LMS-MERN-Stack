@@ -117,3 +117,61 @@
     padding-top: 10px;
     padding-bottom: 20px;
 }
+
+//=========================================================================================================
+//                                      LEARNER DASHBOARD
+//=========================================================================================================
+.learnerbox{
+    border-radius: 10px;
+    background-color: #18a4ab;
+    color: white;
+    padding:20px;
+    margin:2%;
+    margin-left: 0;
+}
+.certbox{
+    border-radius: 10px;
+    background-color: #18a4ab;
+    color: white;
+    padding:20px;
+    margin:2%;
+    margin-left: 0;
+}
+.certbox:hover{
+    box-shadow: 3px 3px 5px #484848;
+	transform: translateY(-3px);
+	transition: all 0.3s ease 0s;
+}
+.learneroutterbox{
+    width: 90%;
+    margin:3%;
+    margin-top: 5%;
+    max-height: 400px;
+    overflow-x: auto;
+}
+/*SCROLL BAR-----------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    scrollbar-gutter: auto;
+    float:left;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(243, 243, 243);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(231, 231, 231);
+  }
+  
+.mostoutterbox{
+    display: flex;
+}
