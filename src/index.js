@@ -12,6 +12,11 @@ import ViewDetails from './components/AdminPages/CoursePages/ViewDetails';
 import Login from './components/LearnerPages/Login';
 import RegisterLearner from './components/LearnerPages/Register';
 import LearnerDash from './components/LearnerPages/LearnerDash';
+import ViewLearners from './components/AdminPages/ViewLearner';
+import CourseSettings from './components/AdminPages/CoursePages/CourseSettings';
+import ViewAssessments from './components/AdminPages/ViewAssessments';
+import ViewCertificates from './components/AdminPages/ViewCertificates';
+import ViewMaterials from './components/AdminPages/ViewMaterials';
 
 
 function Greeting(props) {
@@ -34,6 +39,11 @@ function Greeting(props) {
     <Route path = '/AddCourse' element={<AddCourse/>} />
     <Route path = '/ViewDetails' element={<ViewDetails/>} />
     <Route path='/LearnerDash' element={<LearnerDash/>} />
+    <Route path='/ViewLearners' element={<ViewLearners/>} />
+    <Route path='/CourseSettings' element={<CourseSettings/>} />
+    <Route path='/ViewAssessments' element={<ViewAssessments/>} />
+    <Route path='/ViewCertificates' element={<ViewCertificates/>} />
+    <Route path='/ViewMaterials' element={<ViewMaterials/>} />
     </Routes>
   </Router>;
 }

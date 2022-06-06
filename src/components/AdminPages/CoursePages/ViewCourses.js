@@ -20,6 +20,15 @@ function ViewCourses() {
   
   }, [])
 
+  const sendCourseID = (id) => {
+    axios.post('http://localhost:8086/StoreCourseIDforDetails?id='+id)
+    .then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error);
+    });
+  }
+  
   return (
     <div className={styles.outterboxcourses}>
     <MenuBar/>
@@ -36,7 +45,7 @@ function ViewCourses() {
                   <Col xs="3">{item.CourseID}</Col>
                 <Col xs="6">{item.CourseName}</Col>
                 <Col>
-                <button className={styles.btnprimary}><a href ="/ViewDetails" >View Details</a></button>
+                <button className={styles.btnprimary} onClick={() => sendCourseID(item.CourseID)}><a href ="/ViewDetails" >View Details</a></button>
                 </Col>
               </Row>
               </div>
@@ -44,12 +53,6 @@ function ViewCourses() {
           </div>
         </div>
       </div>
-        // <Container>
-        //   <Row className="justify-content-md-center">
-        //     <Col xs="3">{item.CourseID}</Col>
-        //     <Col>{item.CourseName}</Col>
-        //   </Row>
-        // </Container>
         })}      
         </p>:
            <p>NO ITEM</p>

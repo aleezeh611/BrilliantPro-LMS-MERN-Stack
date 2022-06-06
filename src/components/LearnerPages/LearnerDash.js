@@ -16,6 +16,7 @@ function LearnerDash() {
     const popupCloseHandler = (e) => {
       setVisibility(e);
     };
+    
     useEffect(()=>{
       axios.get('http://localhost:8086/getcurrentuser').then(response => {
         console.log("SUCCESS", response)
@@ -82,13 +83,13 @@ function LearnerDash() {
            <p>Learner Does Not Exist, Please Put in Correct Login Credentials</p>
         } 
         </div>
-        <button onClick={(e) => setVisibility(!visibility)}>Toggle Popup</button>
  
         <CustomPopup
         onClose={popupCloseHandler}
         show={visibility}
         title="Here's your certificate!"
         >
+        <center><img src = {certificate} width = "500px" height="400px"></img></center>
         </CustomPopup>
         
     </div>

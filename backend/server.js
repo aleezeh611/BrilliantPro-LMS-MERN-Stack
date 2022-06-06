@@ -13,6 +13,7 @@ var cors = require('cors')
 app.use(cors());
 
 username = ""
+courseid = ""
 
 //==============================================mongodb================================================
 // Connect using a MongoClient instance
@@ -140,10 +141,30 @@ app.post('/RegisterLearner', function(req, res){
 })
 })
 
+//-------------------------------------STORE INFO FOR STATE MANAGEMENT------------------------------------
 app.post('/StoreUsername', function(req, res){
   console.log("Logged in --> name="+req.query.id);
   username = req.query.id; 
   res.send("Received data:: title ="+req.query.name);
+})
+
+app.post('/StoreCourseIDforDetails', function(req, res){
+  console.log("Current Course --> name="+req.query.id);
+  courseid = req.query.id; 
+  res.send("Received data:: title ="+req.query.name);
+})
+
+//-------------------------------------------GENERAL FTNS------------------------------------------------
+app.get('/getCourseDetails', function(req, res){
+  mongoClient.connect(function (err, client) {
+      const db = client.db(dbName);
+  db.collection("courses")
+      .find({"CourseID": courseid})
+      .toArray(function (err, rows) {
+      if (err) throw err;
+      res.send(rows);
+  });
+  })
 })
 
 app.get('/getAllLearners', function(req, res){
@@ -158,7 +179,6 @@ app.get('/getAllLearners', function(req, res){
   });
   })
 })
-
 app.get('/getcurrentuser', function(req, res){
     res.send(username);
 })

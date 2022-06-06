@@ -6,10 +6,10 @@ function MenuBar() {
   return (
       <div className = {styles.menubox}>
         <button className = {styles.menuitems}><a href = "/ViewCourses">Course</a></button>
-        <button className = {styles.menuitems}>Learners</button>
-        <button className = {styles.menuitems}>Certificates</button>
-        <button className = {styles.menuitems}>Assessments</button>
-        <button className = {styles.menuitems}>Materials</button>
+        <button className = {styles.menuitems}><a href = "/ViewLearners">Learners</a></button>
+        <button className = {styles.menuitems}><a href = "/ViewCertificates">Certificates</a></button>
+        <button className = {styles.menuitems}><a href = "/ViewAssessments">Assessments</a></button>
+        <button className = {styles.menuitems}><a href = "/ViewMaterials">Materials</a></button>
       </div>
 
   );
