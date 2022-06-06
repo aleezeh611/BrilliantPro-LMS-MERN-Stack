@@ -49,7 +49,7 @@ function Login() {
         </td>
         </tr>
       </table>
-      <center><button className={styles.loginbtn}><a href ="/AdminDash" >Login</a></button></center>
+      <center><button className={styles.loginbtn}><a href ="/LearnerDash" >Login</a></button></center>
       </form>
         <center><heading2><a href = "/RegisterLearner">Not a user? Create a new account</a></heading2></center>
       </div>

@@ -72,7 +72,7 @@ function AdminDash() {
             <heading2 style={{color: "white"}}>Total Active Courses: {courseCount.data}</heading2>
             </div>
         </a></div>
-        <div className={styles.innerbox}>
+        <div className={styles.innerbox}><a href = '/ViewLearners'>
             <div className={styles.graphicbox2}>
             <img src = {learnersimg} width = "170px" height= "330px"/>
             </div>
@@ -80,8 +80,8 @@ function AdminDash() {
             <heading1 style={{color: "white"}}>Learners</heading1>
             <heading2 style={{color: "white"}}>Total Active Learners: {learnerCount.data}</heading2>
             </div>
-        </div>
-        <div className={styles.innerbox}>
+        </a></div>
+        <div className={styles.innerbox}><a href = '/ViewCertificates'>
             <div className={styles.graphicbox3}>
                 <img src = {certificateimg} width = "190px" height= "320px"/>
             </div>
@@ -89,8 +89,8 @@ function AdminDash() {
             <heading1 style={{color: "white"}}>Certificates</heading1>
             <heading2 style={{color: "white"}}>Certificates Distributed: {certificateCount.data}</heading2>
             </div>
-        </div>
-        <div className={styles.innerbox}>
+        </a></div>
+        <div className={styles.innerbox}><a href = '/ViewAssessments'>
             <div className={styles.graphicbox4}>
                 <img src = {assessmentsdash} width = "230px" height= "330px"/>
             </div>
@@ -98,8 +98,8 @@ function AdminDash() {
             <heading1 style={{color: "white"}}>Assessments</heading1>
             <heading2 style={{color: "white"}}>Current Assessments: {assessmentCount.data}</heading2>
             </div>
-        </div>
-        <div className={styles.innerbox}>
+        </a></div>
+        <div className={styles.innerbox}><a href = '/ViewMaterials'>
             <div className={styles.graphicbox5}>
                 <img src = {materialsimg} width = "190px" height= "330px"/>
             </div>
@@ -107,7 +107,7 @@ function AdminDash() {
             <heading1 style={{color: "white"}}>Materials</heading1>
             <heading2 style={{color: "white"}}>Total Uploaded Materials: {materialCount.data}</heading2>
             </div>
-        </div>
+        </a></div>
     </div>
   );
 }

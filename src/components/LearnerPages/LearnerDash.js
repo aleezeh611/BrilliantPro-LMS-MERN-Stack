@@ -16,6 +16,7 @@ function LearnerDash() {
     const popupCloseHandler = (e) => {
       setVisibility(e);
     };
+    
     useEffect(()=>{
       axios.get('http://localhost:8086/getcurrentuser').then(response => {
         console.log("SUCCESS", response)
