@@ -119,6 +119,92 @@ navbar_item a:hover{
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
+
 .menuitems:hover{
     background-color: #5eb5b9;
+}
+.menuitems a{
+    color:white;
+    text-decoration: none;
+}
+.menuitems a:hover{
+    color:white;
+    text-decoration: none;
+}
+
+//=================================================================================================
+//                                      Login Page
+//=================================================================================================
+.formbox{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background-color: rgb(243, 243, 243);
+    padding:3%;
+    border-radius: 20px;
+}
+.tablestyle{
+    width:100%;
+    vertical-align: middle;
+    margin-top: 1%;
+}
+
+.searchform{
+    width:100%;
+    border-radius: 10px;
+    padding:5px;
+    font-family:Poppins;
+    font-size: 13px;
+    margin-bottom: 20px;
+    border-color: white;
+    vertical-align: middle;
+}
+.searchform:hover{
+    // border-color: #18A4AB;
+    border-style: solid;
+    border-color: #FF5757;
+}
+
+.loginbtn{
+    width:15%;
+    background-color:#18A4AB;
+    color: white;
+    font-family: Poppins;
+    border-radius: 10px;
+    border-style: none;
+    padding:5px;
+    font-size: 15px;
+}
+.loginbtn:hover{
+    background-color: #F6B737;
+}
+
+.btnprimary {
+    text-align: center;
+    border-style: none;
+    border-radius: 40px;
+    font-family: Poppins;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #b7b8b8;
+    margin:2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    // text-decoration: none;
+}
+
+.btnprimary a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.btnprimary a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+.btnprimary:hover {
+    border-width: 1px;
+    background-color: #F6B737;
+    color: white;
 }

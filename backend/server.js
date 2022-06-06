@@ -31,6 +31,8 @@ const mongoClient = new MongoClient(url);
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 app.get('/', (req, res) => res.send('Server has started!'));
 
+
+//Admin Dashboard API Calls--------------------------------------------------------------------------
 app.get('/getCourses', function(req, res){
   mongoClient.connect(function (err, client) {
       console.log("MongoDB Connected")
@@ -114,6 +116,22 @@ app.post('/AddCourse', function(req, res){
          Fee: req.query.fee, 
          EnrollLink: req.query.link,
          TotalLearners: 0  
+    });
+  res.send("Received data:: title ="+req.query.name);
+})
+})
+
+//Login and Sign Up Pages---------------------------------------------------------------------------------
+app.post('/RegisterLearner', function(req, res){
+  console.log("Got a POST request for Register Learner --> name="+req.query.username);
+  mongoClient.connect(function (err, client) {
+      const db = client.db(dbName);
+      db.collection("learners").insertOne({
+         username:req.query.username, 
+         name: req.query.name, 
+         password:req.query.pass, 
+         contact: req.query.contact,
+         status: "idle"  
     });
   res.send("Received data:: title ="+req.query.name);
 })

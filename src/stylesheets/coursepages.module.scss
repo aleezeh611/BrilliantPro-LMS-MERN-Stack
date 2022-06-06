@@ -10,9 +10,9 @@
     display: grid;
     margin-left: 4%;
     padding:3%;
-    margin-top: 4%;
+    margin-top: 5%;
     min-height: 100%;
-    max-height: 420px;
+    max-height: 480px;
 }
   
 .outterboxcourses{
@@ -55,6 +55,7 @@
 .searchbtn:hover{
     background-color: #F6B737;
 }
+
 td{
     vertical-align: top;
 }
@@ -67,10 +68,8 @@ td{
     display: flex;
 }
 .btnprimary {
-    border-color: #18A4AB;
     text-align: center;
-    border-style: solid;
-    border-width: 2px;
+    border-style: none;
     border-radius: 40px;
     font-family: Poppins;
     font-size: 15px;
@@ -87,10 +86,37 @@ td{
     text-decoration: none;
     color: #ffffff;
 }
-
+.btnprimary a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
 .btnprimary:hover {
     border-width: 1px;
     background-color: #F6B737;
+    color: white;
+}
+
+.addbtn{
+    width:30%;
+    background-color:#FF5757;
+    font-family: Poppins;
+    border-radius: 10px;
+    border-style: none;
+    padding:5px;
+    margin-left: 68%;
+    font-size: 15px;
+    margin-bottom: 2%;
+}
+.addbtn:hover{
+    background-color: #F6B737;
+}
+
+.addbtn a{
+    text-decoration: none;
+    color: white;
+}
+.addbtn a:hover{
+    text-decoration: none;
     color: white;
 }
 

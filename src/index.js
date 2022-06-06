@@ -1,24 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StartPage from './components/StartPage';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ViewCourses from './components/CoursePages/ViewCourses';
+import ViewCourses from './components/AdminPages/CoursePages/ViewCourses';
 import AdminDash from './components/AdminDash';
 import Navigation from './components/Navigation';
-import AddCourse from './components/CoursePages/AddCourse';
-import ViewDetails from './components/CoursePages/ViewDetails';
+import AddCourse from './components/AdminPages/CoursePages/AddCourse';
+import ViewDetails from './components/AdminPages/CoursePages/ViewDetails';
+import Login from './components/LearnerPages/Login';
+import RegisterLearner from './components/LearnerPages/Register';
 
 
 function Greeting(props) {
   const curr_path = props.curr_path;
-  if (curr_path === "/" || curr_path === "/StartPage") {
+  if (curr_path === "/" || curr_path === "/RegisterLearner" || curr_path === "/Login") {
     return   <Router>
       <Routes>
         <Route path='/' element={<StartPage/>} />
         <Route path='/StartPage' element={<StartPage/>} />
+        <Route path='/Login' element={<Login/>} />
+        <Route path='/RegisterLearner' element={<RegisterLearner/>} />
       </Routes>
     </Router>;
   }

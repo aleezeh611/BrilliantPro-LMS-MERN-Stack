@@ -5,7 +5,7 @@ function MenuBar() {
 
   return (
       <div className = {styles.menubox}>
-        <button className = {styles.menuitems}>Courses</button>
+        <button className = {styles.menuitems}><a href = "/ViewCourses">Course</a></button>
         <button className = {styles.menuitems}>Learners</button>
         <button className = {styles.menuitems}>Certificates</button>
         <button className = {styles.menuitems}>Assessments</button>
